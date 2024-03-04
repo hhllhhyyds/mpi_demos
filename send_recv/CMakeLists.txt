@@ -5,13 +5,13 @@ project(SendRecv)
 
 include(${CMAKE_SOURCE_DIR}/../common_1.cmake)
 
-add_executable(send_recv_1 send_recv_1.cpp)
+add_executable(send_recv_1 send_recv_1.cpp basic.cpp)
 set_target_properties(send_recv_1 PROPERTIES INCLUDE_DIRECTORIES "${MPI_C_INCLUDE_PATH}")
 set_target_properties(send_recv_1 PROPERTIES COMPILE_FLAGS "${MPI_C_COMPILE_FLAGS}")
 set_target_properties(send_recv_1 PROPERTIES LINK_FLAGS "${MPI_C_LINK_FLAGS}")
 target_link_libraries(send_recv_1 PRIVATE "${MPI_C_LIBRARIES}")
 
-add_executable(send_recv_2 send_recv_2.cpp)
+add_executable(send_recv_2 send_recv_2.cpp basic.cpp)
 set_target_properties(send_recv_2 PROPERTIES INCLUDE_DIRECTORIES "${MPI_C_INCLUDE_PATH}")
 set_target_properties(send_recv_2 PROPERTIES COMPILE_FLAGS "${MPI_C_COMPILE_FLAGS}")
 set_target_properties(send_recv_2 PROPERTIES LINK_FLAGS "${MPI_C_LINK_FLAGS}")
